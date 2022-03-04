@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored Books</title>
+</head>
+<body>
+    <a href="/">Go Home</a>
+    <h1>New AddressBook Created With ID: <h1 th:text="${id}"/></h1>
+    <form action="#" th:action="@{'/getBook/' + ${id}}" method="post">
+        <p><input type="submit" value="Go to the newly created AddressBook"
+        /></p>
+    </form>
+
+    <p>To view the any book type in the url after the domain
+        /getBook/addressbookID</p>
+
+    <p>For example, if the book you want to view has an ID of 10 you would
+        type /getbook/10</p>
+</body>
+</html>

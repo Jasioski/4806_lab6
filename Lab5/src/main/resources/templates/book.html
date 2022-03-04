@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored Books</title>
+</head>
+<body>
+    <a href="/">Go Home</a>
+    <h1>AddressBook</h1>
+    <h1 th:text="${id}"/>
+    <p>Buddies</p>
+    <p th:text="${buddies}"/>
+
+    <form action="#" th:action="@{'/getBook/' + ${id}}" th:object="${buddyInfo}"
+          method="post">
+        <p><input type="submit" value="Create New Default Buddy" /></p>
+    </form>
+</body>
+</html>

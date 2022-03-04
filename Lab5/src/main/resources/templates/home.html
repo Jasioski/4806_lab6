@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored Books</title>
+    <script src="AddressBook.js"></script>
+</head>
+<body>
+    <h1>Homepage</h1>
+    <form action="#" th:action="@{/create/book}" th:object="${addressBook}"
+          method="post">
+        <p><input type="submit" value="Create Address Book" /></p>
+    </form>
+</body>
+</html>
